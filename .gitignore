@@ -1,0 +1,85 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# =========================
+# OS / archivos temporales
+# =========================
+Thumbs.db
+ehthumbs.db
+*.swp
+*.tmp
+
+# =========================
+# IDEs / editores
+# =========================
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# =========================
+# Java / Maven / Gradle
+# =========================
+**/target/
+**/*.class
+**/*.jar
+**/*.war
+**/*.ear
+**/.classpath
+**/.project
+**/.settings/
+.mvn/wrapper/maven-wrapper.jar
+
+# =========================
+# Node / React / Vite
+# =========================
+**/node_modules/
+**/dist/
+**/.vite/
+**/.cache/
+*.tsbuildinfo
+
+# =========================
+# Env / secretos
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Coverage / tests
+# =========================
+**/coverage/
+**/.nyc_output/
+
+# =========================
+# Tomcat / servidores locales
+# =========================
+**/logs/
+**/temp/
+**/work/

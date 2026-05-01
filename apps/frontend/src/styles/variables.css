@@ -1,0 +1,63 @@
+/* ALUMIPRO — Sistema de diseño industrial premium */
+/* Identidad: Acero anodizado · Aluminio bruñido · Naranja de llama */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  --c-base:       #0E1117;
+  --c-base-2:     #151B25;
+  --c-base-3:     #1C2432;
+  --c-base-4:     #232D3F;
+  --c-base-5:     #2C3850;
+  --c-surface:    #F2F4F7;
+  --c-surface-2:  #E8ECF2;
+  --c-card:       #FFFFFF;
+  --c-border:     #D8DFE8;
+  --c-border-2:   #C4CDD8;
+  --c-flame:      #E05C1A;
+  --c-flame-2:    #F07030;
+  --c-flame-glow: rgba(224,92,26,0.20);
+  --c-silver:     #8FA3BB;
+  --c-silver-2:   #B8C8D8;
+  --c-text:       #0E1117;
+  --c-text-muted: #5A6E82;
+  --c-text-on-dark: #E8ECF2;
+  --c-text-on-dark-muted: rgba(232,236,242,0.65);
+  --c-success:    #15803D;
+  --c-danger:     #B91C1C;
+  --c-danger-bg:  #FEF2F2;
+  --font-display: 'Barlow Condensed', 'Impact', sans-serif;
+  --font-body:    'Barlow', 'Helvetica Neue', sans-serif;
+  --font-mono:    'DM Mono', 'Courier New', monospace;
+  --sidebar-width: 256px;
+  --sidebar-bg:    #0E1117;
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 20px;
+  --sp-6: 24px; --sp-7: 32px; --sp-8: 40px; --sp-9: 56px;
+  --r-sm: 6px; --r-md: 10px; --r-lg: 16px; --r-xl: 22px;
+  --sh-1: 0 1px 3px rgba(14,17,23,0.08), 0 1px 2px rgba(14,17,23,0.06);
+  --sh-2: 0 4px 16px rgba(14,17,23,0.12), 0 2px 6px rgba(14,17,23,0.08);
+  --sh-3: 0 12px 40px rgba(14,17,23,0.18), 0 4px 12px rgba(14,17,23,0.10);
+  --sh-flame: 0 4px 20px rgba(224,92,26,0.30);
+  /* Compatibilidad con código existente */
+  --color-primary:        #1C2432;
+  --color-primary-light:  #232D3F;
+  --color-accent:         #E05C1A;
+  --color-accent-light:   #F07030;
+  --color-surface:        #F2F4F7;
+  --color-card:           #FFFFFF;
+  --color-border:         #D8DFE8;
+  --color-text:           #0E1117;
+  --color-text-muted:     #5A6E82;
+  --color-success:        #15803D;
+  --color-danger:         #B91C1C;
+  --color-danger-light:   #FEF2F2;
+  --font-ui:              'Barlow', 'Helvetica Neue', sans-serif;
+  --font-heading:         'Barlow Condensed', 'Impact', sans-serif;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-7: 32px; --space-8: 40px;
+  --radius-1: 6px; --radius-2: 10px; --radius-3: 16px;
+  --shadow-1: 0 1px 3px rgba(14,17,23,0.08), 0 1px 2px rgba(14,17,23,0.06);
+  --shadow-2: 0 4px 16px rgba(14,17,23,0.12), 0 2px 6px rgba(14,17,23,0.08);
+  --focus-ring: 0 0 0 3px rgba(224,92,26,0.28);
+  --font-size-base: 16px;
+}

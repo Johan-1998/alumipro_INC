@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Nuevo Producto</title>
+</head>
+<body>
+<h1>Nuevo Producto</h1>
+
+<p th:if="${error}" th:text="${error}" style="color:red;"></p>
+
+<form th:action="@{/productos/guardar}" method="post" th:object="${producto}">
+    <label>Nombre:</label>
+    <input type="text" th:field="*{nombre}" maxlength="255" required/>
+    <br/><br/>
+
+    <label>Precio:</label>
+    <input type="number" step="0.01" min="0" th:field="*{precio}" required/>
+    <br/><br/>
+
+    <label>Stock:</label>
+    <input type="number" min="0" th:field="*{stock}" required/>
+    <br/><br/>
+
+    <label>Descripción:</label><br/>
+    <textarea th:field="*{descripcion}" rows="4" cols="40"></textarea>
+    <br/><br/>
+
+    <button type="submit">Guardar</button>
+    <a href="/productos">Cancelar</a>
+</form>
+
+</body>
+</html>

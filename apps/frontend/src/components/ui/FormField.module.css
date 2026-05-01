@@ -1,0 +1,80 @@
+/* archivo de estilos formfield.module */
+.field{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.labelRow{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.label{
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--color-text);
+}
+
+.req{
+  color: var(--color-danger);
+  margin-left: 3px;
+}
+
+.hint{
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.control{
+  display: block;
+}
+
+.control :global(input),
+.control :global(select),
+.control :global(textarea){
+  width: 100%;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  padding: 10px 12px;
+  border-radius: 14px;
+  outline: none;
+  transition: box-shadow 140ms ease, border-color 140ms ease;
+  color: var(--color-text);
+}
+
+.control :global(textarea){
+  min-height: 96px;
+  resize: vertical;
+}
+
+.control :global(input:focus),
+.control :global(select:focus),
+.control :global(textarea:focus){
+  border-color: rgba(42,90,140,0.55);
+  box-shadow: var(--focus-ring);
+}
+
+.controlError :global(input),
+.controlError :global(select),
+.controlError :global(textarea){
+  border-color: rgba(192,57,43,0.55);
+  box-shadow: 0 0 0 3px rgba(192,57,43,0.12);
+}
+
+.error{
+  font-size: 0.86rem;
+  color: var(--color-danger);
+}
+
+@media (max-width: 639px){
+  .control :global(input),
+  .control :global(select){
+    min-height: 44px;
+  }
+  .control :global(textarea){
+    min-height: 110px;
+  }
+}

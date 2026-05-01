@@ -1,0 +1,101 @@
+/* archivo de estilos datatable.module */
+.wrap{
+  width: 100%;
+}
+
+.desktopTable{
+  display: block;
+}
+
+.table{
+  width: 100%;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+}
+
+.table thead th{
+  text-align: left;
+  font-size: 0.86rem;
+  color: var(--color-text-muted);
+  background: rgba(245,247,250,0.75);
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.thBtn{
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: inherit;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.sortable{
+  cursor: pointer;
+}
+
+.sortIcon{
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-primary);
+}
+
+.table tbody td{
+  padding: 12px 14px;
+  border-top: 1px solid rgba(209,217,224,0.65);
+  vertical-align: top;
+}
+
+.table tbody tr:nth-child(even){
+  background: rgba(245,247,250,0.45);
+}
+
+.table tbody tr:hover{
+  background: rgba(27,58,92,0.04);
+}
+
+.mobileCards{
+  display: none;
+  gap: var(--space-3);
+}
+
+.card{
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-1);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.cardRow{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.cardLabel{
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+  font-weight: 700;
+}
+
+.cardValue{
+  text-align: right;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+@media (max-width: 639px){
+  .desktopTable{ display: none; }
+  .mobileCards{ display: grid; }
+}

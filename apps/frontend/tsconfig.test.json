@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "lib": ["ES2022", "DOM"],
+    "strict": true,
+    "noEmit": false,
+    "outDir": "dist-test",
+    "rootDir": ".",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "include": [
+    "src/utils/**/*.ts",
+    "src/services/auth.storage.ts",
+    "src/types/**/*.ts",
+    "tests/**/*.ts"
+  ]
+}

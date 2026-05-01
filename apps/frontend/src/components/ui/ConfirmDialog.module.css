@@ -1,0 +1,5 @@
+/* archivo de estilos confirmdialog.module */
+.message{
+  font-size: 0.98rem;
+  color: var(--color-text);
+}

@@ -1,0 +1,38 @@
+/* archivo de estilos emptystate.module */
+.empty{
+  text-align: center;
+  background: var(--color-card);
+  border: 1px dashed rgba(209,217,224,0.9);
+  border-radius: var(--radius-3);
+  padding: var(--space-7);
+  color: var(--color-text);
+}
+
+.icon{
+  width: 64px;
+  height: 64px;
+  border-radius: 24px;
+  margin: 0 auto var(--space-4);
+  display: grid;
+  place-items: center;
+  background: rgba(27,58,92,0.06);
+  color: var(--color-primary);
+  border: 1px solid rgba(27,58,92,0.18);
+}
+
+.title{
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.desc{
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.action{
+  margin-top: var(--space-5);
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,74 @@
+/* ALUMIPRO — Global styles */
+@import "./variables.css";
+@import "./reset.css";
+
+html { font-size: 16px; scroll-behavior: smooth; }
+@media (max-width: 639px) { html { font-size: 14px; } }
+@media (min-width: 640px) and (max-width: 1024px) { html { font-size: 15px; } }
+
+body {
+  font-family: var(--font-body);
+  color: var(--c-text);
+  background: var(--c-surface);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 6px;
+}
+
+::selection {
+  background: rgba(224,92,26,0.18);
+  color: var(--c-text);
+}
+
+/* ── CONTENEDOR ────────────────────────────────── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--sp-6);
+}
+@media (max-width: 639px) { .container { padding: var(--sp-4); } }
+
+/* ── UTILIDADES ────────────────────────────────── */
+.u-row { display: flex; gap: var(--sp-4); align-items: center; }
+.u-wrap { flex-wrap: wrap; }
+.u-grow { flex: 1; }
+.u-muted { color: var(--c-text-muted); }
+.u-card {
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-1);
+}
+
+/* ── HEADINGS globales ─────────────────────────── */
+h1,h2,h3,h4 { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.02em; }
+
+/* ── ALUMIPRO TOAST ─────────────────────────────── */
+.alumiproToast {
+  background: var(--c-base-2) !important;
+  color: var(--c-text-on-dark) !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  box-shadow: var(--sh-3) !important;
+  border-radius: var(--r-lg) !important;
+  padding: 12px 14px !important;
+  max-width: 360px !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.93rem !important;
+  font-weight: 500 !important;
+}
+
+/* ── LÍNEA DECORATIVA FLAME ─────────────────────── */
+.flame-line {
+  display: inline-block;
+  width: 40px;
+  height: 3px;
+  background: var(--c-flame);
+  border-radius: 2px;
+  margin-bottom: 8px;
+}

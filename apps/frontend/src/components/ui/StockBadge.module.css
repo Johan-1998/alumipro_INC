@@ -1,0 +1,41 @@
+/* archivo de estilos stockbadge.module */
+.badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.86rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+}
+
+.dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+}
+
+.ok{
+  color: var(--color-success);
+  border-color: rgba(26,122,74,0.25);
+  background: rgba(26,122,74,0.06);
+}
+.ok .dot{ background: var(--color-success); }
+
+.low{
+  color: #8A5A00;
+  border-color: rgba(212,136,10,0.35);
+  background: rgba(212,136,10,0.10);
+}
+.low .dot{ background: var(--color-accent); }
+
+.zero{
+  color: var(--color-danger);
+  border-color: rgba(192,57,43,0.30);
+  background: var(--color-danger-light);
+}
+.zero .dot{ background: var(--color-danger); }
+
+.text{ white-space: nowrap; }

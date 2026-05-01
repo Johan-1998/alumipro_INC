@@ -1,0 +1,336 @@
+/* ALUMIPRO — Dashboard industrial */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-8);
+}
+
+/* ── HÉROE DEL DASHBOARD ─────────────────────── */
+.hero {
+  position: relative;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  min-height: 180px;
+  display: flex;
+  align-items: flex-end;
+  padding: 36px 40px;
+  background: linear-gradient(135deg, var(--c-base) 0%, var(--c-base-3) 60%, var(--c-base-5) 100%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=70');
+  background-size: cover;
+  background-position: center 40%;
+  opacity: 0.12;
+}
+
+/* Patrón rejilla metálica */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.04) 0px,
+      rgba(255,255,255,0.04) 1px,
+      transparent 1px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.04) 0px,
+      rgba(255,255,255,0.04) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(224,92,26,0.18);
+  border: 1px solid rgba(224,92,26,0.38);
+  border-radius: 3px;
+  padding: 3px 10px;
+  margin-bottom: 12px;
+}
+
+.heroBadgeDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--c-flame);
+  box-shadow: 0 0 5px var(--c-flame);
+}
+
+.heroBadgeText {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-flame-2);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.heroSub {
+  color: rgba(232,236,242,0.65);
+  font-size: 0.92rem;
+  font-weight: 400;
+}
+
+/* ── STATS ──────────────────────────────────── */
+.statsGrid {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1100px) { .statsGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .statsGrid { grid-template-columns: 1fr; } }
+
+/* ── SECCIÓN GENÉRICA ───────────────────────── */
+.section {}
+
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--c-base);
+  margin: 0;
+}
+
+.sub {
+  color: var(--c-text-muted);
+  font-size: 0.84rem;
+  font-weight: 500;
+}
+
+/* ── ABOUT ──────────────────────────────────── */
+.aboutCard {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: var(--sp-5);
+  padding: var(--sp-6) var(--sp-7);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--c-border);
+  background: var(--c-card);
+  box-shadow: var(--sh-1);
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutCard::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--c-flame) 0%, var(--c-flame-2) 100%);
+}
+
+.aboutIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--r-md);
+  display: grid;
+  place-items: center;
+  background: rgba(14,17,23,0.05);
+  border: 1px solid var(--c-border);
+  color: var(--c-base-3);
+  flex-shrink: 0;
+}
+
+.aboutText {}
+
+.p { margin: 0 0 var(--sp-3) 0; line-height: 1.7; color: var(--c-text); }
+.p:last-child { margin-bottom: 0; }
+
+/* ── PROYECTOS ──────────────────────────────── */
+.projectsGrid {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 900px) { .projectsGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .projectsGrid { grid-template-columns: 1fr; } }
+
+.projectCard {
+  overflow: hidden;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--c-border);
+  background: var(--c-card);
+  box-shadow: var(--sh-1);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.projectCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sh-2);
+}
+
+.projectImg {
+  width: 100%;
+  aspect-ratio: 4 / 2.5;
+  background: var(--c-surface-2);
+  overflow: hidden;
+}
+.projectImg > * { width: 100%; height: 100%; }
+
+.projectBody { padding: var(--sp-4); }
+
+.projectTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.0rem;
+  color: var(--c-base);
+  letter-spacing: 0.01em;
+}
+
+.projectMeta {
+  margin-top: 6px;
+  color: var(--c-text-muted);
+  font-size: 0.84rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.projectCity {}
+.dot { opacity: 0.5; }
+.projectCat {
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: rgba(224,92,26,0.08);
+  border: 1px solid rgba(224,92,26,0.20);
+  color: var(--c-flame);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── SERVICIOS ──────────────────────────────── */
+.servicesGrid {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 900px) { .servicesGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .servicesGrid { grid-template-columns: 1fr; } }
+
+.service {
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  background: var(--c-card);
+  box-shadow: var(--sh-1);
+  padding: var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.service:hover {
+  border-color: rgba(224,92,26,0.30);
+  box-shadow: var(--sh-2);
+}
+
+.serviceIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--r-md);
+  display: grid;
+  place-items: center;
+  background: rgba(14,17,23,0.04);
+  border: 1px solid var(--c-border);
+  color: var(--c-flame);
+}
+
+.serviceTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: var(--c-base);
+  text-transform: uppercase;
+}
+
+.serviceDesc {
+  color: var(--c-text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* ── CERTIFICACIONES STRIP ──────────────────── */
+.certsStrip {
+  display: flex;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+.certBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--c-border);
+  background: var(--c-card);
+  box-shadow: var(--sh-1);
+}
+
+.certIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: rgba(14,17,23,0.06);
+  display: grid;
+  place-items: center;
+  color: var(--c-base-3);
+}
+
+.certText {
+  font-weight: 700;
+  font-size: 0.86rem;
+  color: var(--c-base);
+}
+
+.certSub {
+  font-size: 0.75rem;
+  color: var(--c-text-muted);
+}

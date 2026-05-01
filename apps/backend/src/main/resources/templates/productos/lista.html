@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>ALUMIPRO - Productos</title>
+</head>
+<body>
+<h1>Listado de Productos</h1>
+
+<p><a href="/productos/nuevo">Nuevo producto</a></p>
+
+<table border="1" cellpadding="6">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        <th>Descripción</th>
+        <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="p : ${productos}">
+        <td th:text="${p.id}"></td>
+        <td th:text="${p.nombre}"></td>
+        <td th:text="${p.precio}"></td>
+        <td th:text="${p.stock}"></td>
+        <td th:text="${p.descripcion}"></td>
+        <td>
+            <a th:href="@{/productos/editar/{id}(id=${p.id})}">Editar</a>
+            |
+            <a th:href="@{/productos/eliminar/{id}(id=${p.id})}"
+               onclick="return confirm('¿Eliminar producto?');">Eliminar</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

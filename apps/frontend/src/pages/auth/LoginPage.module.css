@@ -1,0 +1,271 @@
+/* ALUMIPRO — Login page · Industrial premium redesign */
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── PANEL IZQUIERDO: foto de fondo + overlay ─── */
+.imageSide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 48px;
+  overflow: hidden;
+}
+
+/* Foto real de trabajadores de ventanería vía Unsplash free */
+.imageSide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80');
+  background-size: cover;
+  background-position: center 30%;
+  filter: brightness(0.55) saturate(0.7);
+  z-index: 0;
+}
+
+/* Gradiente industrial sobre la foto */
+.imageSide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(14,17,23,0.25) 0%, rgba(14,17,23,0.72) 70%, rgba(14,17,23,0.92) 100%),
+    linear-gradient(90deg, rgba(224,92,26,0.10) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.imageContent {
+  position: relative;
+  z-index: 2;
+}
+
+.imageBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(224,92,26,0.15);
+  border: 1px solid rgba(224,92,26,0.40);
+  border-radius: 4px;
+  padding: 5px 12px;
+  margin-bottom: 20px;
+}
+
+.imageBadgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-flame);
+  box-shadow: 0 0 6px var(--c-flame);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(0.85); }
+}
+
+.imageBadgeText {
+  color: var(--c-flame-2);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.imageHeadline {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  color: #fff;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.imageHeadlineAccent {
+  color: var(--c-flame);
+  display: block;
+}
+
+.imageDesc {
+  color: rgba(232,236,242,0.78);
+  font-size: 0.97rem;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 380px;
+}
+
+.imageStats {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+.imageStat {}
+
+.imageStatValue {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: #fff;
+  line-height: 1;
+}
+
+.imageStatLabel {
+  font-size: 0.82rem;
+  color: rgba(232,236,242,0.60);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── PANEL DERECHO: formulario ───────────────── */
+.formSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 40px;
+  background: var(--c-surface);
+  position: relative;
+}
+
+/* Patrón de rejilla sutil al fondo */
+.formSide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(14,17,23,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14,17,23,0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+.formInner {
+  position: relative;
+  width: min(420px, 100%);
+  z-index: 1;
+}
+
+/* Marca / Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.logoMark {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--r-md);
+  background: linear-gradient(135deg, var(--c-base-3) 0%, var(--c-base-5) 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--sh-2);
+  flex-shrink: 0;
+}
+
+.logoGlyph {
+  width: 28px;
+  height: 28px;
+}
+
+.brandText {}
+
+.brandName {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  color: var(--c-base);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.brandSub {
+  font-size: 0.80rem;
+  color: var(--c-text-muted);
+  font-weight: 500;
+  margin-top: 3px;
+  letter-spacing: 0.03em;
+}
+
+/* Encabezado del form */
+.formHeader {
+  margin-bottom: 28px;
+}
+
+.formTitle {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.65rem;
+  color: var(--c-base);
+  line-height: 1.1;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.formSub {
+  color: var(--c-text-muted);
+  font-size: 0.92rem;
+}
+
+/* Separador */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, var(--c-flame) 0%, transparent 60%);
+  margin-bottom: 28px;
+  width: 60px;
+}
+
+/* Formulario */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.actions {
+  display: flex;
+  justify-content: stretch;
+  margin-top: var(--sp-2);
+}
+
+.actions > * { width: 100%; }
+
+.helper {
+  margin-top: 20px;
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  background: rgba(14,17,23,0.04);
+  border: 1px solid var(--c-border);
+  color: var(--c-text-muted);
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.helper strong { color: var(--c-base); font-weight: 700; }
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 1024px) {
+  .page { grid-template-columns: 1fr; }
+  .imageSide { display: none; }
+  .formSide { padding: 40px 24px; min-height: 100vh; }
+  .formInner { width: 100%; max-width: 420px; }
+}

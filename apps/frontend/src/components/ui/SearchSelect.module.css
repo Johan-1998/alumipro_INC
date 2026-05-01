@@ -1,0 +1,109 @@
+/* archivo de estilos searchselect.module */
+.wrap{
+  position: relative;
+}
+
+.disabled{ opacity: 0.7; }
+
+.trigger{
+  width: 100%;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  padding: 10px 12px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  transition: box-shadow 140ms ease, border-color 140ms ease;
+  min-height: 44px;
+}
+
+.trigger:hover{
+  border-color: rgba(42,90,140,0.35);
+  box-shadow: var(--shadow-1);
+}
+
+.trigger:focus-visible{
+  box-shadow: var(--focus-ring);
+}
+
+.error{
+  border-color: rgba(192,57,43,0.55);
+  box-shadow: 0 0 0 3px rgba(192,57,43,0.12);
+}
+
+.triggerLeft{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  color: var(--color-text);
+}
+
+.triggerText{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.placeholder{
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.chev{ transition: transform 140ms ease; color: var(--color-text-muted); }
+.chevUp{ transform: rotate(180deg); }
+
+.popover{
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
+  z-index: 70;
+}
+
+.search{
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  outline: none;
+}
+
+.list{
+  max-height: 260px;
+  overflow: auto;
+}
+
+.item{
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-top: 1px solid rgba(209,217,224,0.55);
+  background: transparent;
+}
+
+.item:hover{
+  background: rgba(27,58,92,0.04);
+}
+
+.itemActive{
+  background: rgba(212,136,10,0.10);
+}
+
+.itemLabel{ font-weight: 700; color: var(--color-text); }
+.itemMeta{ font-size: 0.86rem; color: var(--color-text-muted); }
+
+.nores{
+  padding: 12px;
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,94 @@
+/* ALUMIPRO — StatCard industrial */
+.card {
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-1);
+  padding: var(--sp-5) var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  min-height: 120px;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 150ms ease, transform 150ms ease;
+}
+
+.card:hover {
+  box-shadow: var(--sh-2);
+  transform: translateY(-1px);
+}
+
+/* Barra de color superior */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--c-border);
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+
+.label {
+  font-size: 0.80rem;
+  color: var(--c-text-muted);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.value {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  color: var(--c-base);
+}
+
+.helper {
+  margin-top: auto;
+  font-size: 0.80rem;
+  color: var(--c-text-muted);
+  font-weight: 500;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--r-sm);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+/* Tonos */
+.primary::before { background: var(--c-base-3); }
+.primary .icon {
+  background: rgba(28,36,50,0.07);
+  border: 1px solid rgba(28,36,50,0.15);
+  color: var(--c-base-3);
+}
+
+.accent::before { background: var(--c-flame); }
+.accent .icon {
+  background: rgba(224,92,26,0.10);
+  border: 1px solid rgba(224,92,26,0.25);
+  color: var(--c-flame);
+}
+.accent .value { color: var(--c-flame); }
+
+.neutral .icon {
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  color: var(--c-text-muted);
+}

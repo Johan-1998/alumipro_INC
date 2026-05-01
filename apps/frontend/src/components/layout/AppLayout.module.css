@@ -1,0 +1,32 @@
+/* ALUMIPRO — App layout · CORREGIDO */
+
+/* .shell es el nombre real que usa AppLayout.tsx */
+.shell {
+  display: flex;
+  height: 100vh;           /* altura fija para que flex funcione */
+  overflow: hidden;
+  background: var(--c-surface);
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;           /* necesario para que .content herede altura */
+  overflow: hidden;
+}
+
+.content {
+  flex: 1;
+  padding: var(--sp-6) var(--sp-7);
+  overflow-y: auto;        /* scroll solo en el contenido, sidebar fijo */
+}
+
+@media (max-width: 1024px) {
+  .content { padding: var(--sp-5); }
+}
+
+@media (max-width: 639px) {
+  .content { padding: var(--sp-4); }
+}
