@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">ALUMIPRO</string>
+    <string name="brand_name">ALUMIPRO — Gestión Industrial</string>
+    <string name="brand_tagline">Aluminio · Ventanería · Estructuras</string>
+    <string name="brand_tag">Gestión interna móvil</string>
+    <string name="default_api_base_url">http://10.0.2.2:8080/</string>
+
+    <!-- Login -->
+    <string name="login_title">Acceso al sistema</string>
+    <string name="login_headline">ALUMIPRO</string>
+    <string name="login_sub">Gestión interna · Colombia</string>
+    <string name="correo_hint">usuario@alumipro.com</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="btn_ingresar">Ingresar al sistema</string>
+    <string name="btn_config_api">Configurar servidor API</string>
+    <string name="credenciales_demo">Demo: admin@alumipro.com / admin123 · vendedor@alumipro.com / vendedor123</string>
+
+    <!-- Navegación bottom nav -->
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_clientes">Clientes</string>
+    <string name="menu_productos">Productos</string>
+    <string name="menu_ventas">Ventas</string>
+    <string name="menu_ayuda">Ayuda</string>
+    <string name="nav_dashboard">Inicio</string>
+    <string name="nav_clientes">Clientes</string>
+    <string name="nav_productos">Productos</string>
+    <string name="nav_ventas">Ventas</string>
+    <string name="nav_ayuda">Ayuda</string>
+
+    <!-- Búsqueda -->
+    <string name="hint_search">Buscar</string>
+
+    <!-- Estados vacíos -->
+    <string name="empty_clientes">No hay clientes registrados.</string>
+    <string name="empty_productos">No hay productos disponibles.</string>
+    <string name="empty_ventas">No hay ventas registradas.</string>
+    <string name="empty_notificaciones">Aún no hay notificaciones.</string>
+    <string name="sin_resultados">Sin resultados</string>
+
+    <!-- Acciones genéricas -->
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="editar">Editar</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="sincronizar">Sincronizar</string>
+    <string name="sistema_activo">Sistema activo</string>
+
+    <!-- Clientes -->
+    <string name="crear_cliente">Nuevo cliente</string>
+
+    <!-- Productos -->
+    <string name="crear_producto">Nuevo producto</string>
+    <string name="etiqueta_stock">Stock:</string>
+
+    <!-- Ventas -->
+    <string name="nueva_venta">Nueva venta</string>
+    <string name="agregar_item">Agregar producto</string>
+    <string name="registrar_venta">Registrar venta</string>
+    <string name="detalle_venta">Detalle de venta</string>
+    <string name="etiqueta_total">Total</string>
+
+    <!-- API Config -->
+    <string name="configurar_api">Configurar API</string>
+    <string name="guardar_url">Guardar URL</string>
+    <string name="restablecer_url">Restablecer</string>
+
+    <!-- Ayuda / multimedia -->
+    <string name="probar_audio">Reproducir audio</string>
+    <string name="detener_audio">Detener audio</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_bienvenido">Bienvenido</string>
+    <string name="dashboard_clientes_label">Clientes</string>
+    <string name="dashboard_productos_label">Productos</string>
+    <string name="dashboard_ventas_label">Ventas registradas</string>
+    <string name="dashboard_ingresos_label">Ingresos totales</string>
+</resources>

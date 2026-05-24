@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ALUMIPRO — Tema industrial premium -->
+    <style name="Theme.Alumipro" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/ap_flame</item>
+        <item name="colorPrimaryContainer">@color/ap_base_3</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/ap_base_3</item>
+        <item name="colorSecondaryContainer">@color/ap_base_4</item>
+        <item name="colorTertiary">@color/ap_flame_2</item>
+        <item name="colorSurface">@color/ap_surface</item>
+        <item name="colorSurfaceVariant">@color/ap_surface_2</item>
+        <item name="colorOnSurface">@color/ap_text</item>
+        <item name="colorOnSurfaceVariant">@color/ap_text_muted</item>
+        <item name="colorOutline">@color/ap_border</item>
+        <item name="android:statusBarColor">@color/ap_base</item>
+        <item name="android:navigationBarColor">@color/ap_card</item>
+        <item name="android:windowBackground">@color/ap_surface</item>
+        <item name="android:textColor">@color/ap_text</item>
+        <item name="toolbarStyle">@style/Widget.Alumipro.Toolbar</item>
+        <item name="floatingActionButtonStyle">@style/Widget.Alumipro.FAB</item>
+    </style>
+
+    <!-- Toolbar: antracita oscuro -->
+    <style name="Widget.Alumipro.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/ap_base</item>
+        <item name="titleTextColor">@color/ap_text_on_dark</item>
+        <item name="subtitleTextColor">@color/ap_text_on_dark_muted</item>
+        <item name="navigationIconTint">@color/ap_text_on_dark</item>
+    </style>
+
+    <!-- FAB: naranja llama con bordes redondeados cuadrados -->
+    <style name="Widget.Alumipro.FAB" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">@color/ap_flame</item>
+        <item name="tint">@color/white</item>
+    </style>
+
+    <!-- Botón outlined estándar -->
+    <style name="Widget.Alumipro.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/ap_base_3</item>
+        <item name="android:textColor">@color/ap_base_3</item>
+    </style>
+
+    <!-- TextInput outlined -->
+    <style name="Widget.Alumipro.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/ap_border</item>
+        <item name="hintTextColor">@color/ap_text_muted</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+    </style>
+
+    <!-- TextAppearance toolbar title -->
+    <style name="TextAppearance.Alumipro.Toolbar.Title" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/ap_text_on_dark</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

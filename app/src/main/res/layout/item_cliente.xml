@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALUMIPRO — Item Cliente · ImageButton mantenido para compatibilidad con ClienteAdapter.java -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    app:cardBackgroundColor="@color/ap_card"
+    app:cardCornerRadius="10dp"
+    app:strokeColor="@color/ap_border"
+    app:strokeWidth="1dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <!-- Avatar inicial del cliente -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="14dp"
+            app:cardBackgroundColor="@color/ap_base_3"
+            app:cardCornerRadius="8dp"
+            app:strokeWidth="0dp"
+            app:cardElevation="0dp">
+            <TextView
+                android:id="@+id/tvClienteInicial"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="C"
+                android:textColor="@color/ap_text_on_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Datos del cliente -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvClienteNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/ap_text"
+                android:fontFamily="sans-serif-condensed"
+                android:letterSpacing="0.01" />
+
+            <TextView
+                android:id="@+id/tvClienteMeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/ap_text_muted"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- ImageButton: tipo requerido por ClienteAdapter.java -->
+        <ImageButton
+            android:id="@+id/btnEditCliente"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="4dp"
+            android:background="@android:color/transparent"
+            android:padding="7dp"
+            android:src="@drawable/ic_edit_24"
+            android:contentDescription="Editar cliente" />
+
+        <ImageButton
+            android:id="@+id/btnDeleteCliente"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="2dp"
+            android:background="@android:color/transparent"
+            android:padding="7dp"
+            android:src="@drawable/ic_delete_24"
+            android:contentDescription="Eliminar cliente" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

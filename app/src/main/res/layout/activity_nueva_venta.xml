@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALUMIPRO — Nueva Venta · Rediseño industrial -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ap_surface"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarVenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ap_base"
+        android:minHeight="?attr/actionBarSize"
+        android:title="@string/nueva_venta"
+        android:titleTextColor="@color/ap_text_on_dark" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/bg_toolbar_flame_line" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/ap_card"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/ap_border"
+                app:strokeWidth="1dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <!-- Barra flame -->
+                    <View
+                        android:layout_width="36dp"
+                        android:layout_height="2dp"
+                        android:background="@color/ap_flame"
+                        android:layout_marginBottom="14dp" />
+
+                    <!-- Cliente -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CLIENTE"
+                        android:textColor="@color/ap_text_muted"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.10"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerCliente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp" />
+
+                    <!-- Separador -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/ap_border"
+                        android:layout_marginBottom="14dp" />
+
+                    <!-- Productos -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PRODUCTOS"
+                        android:textColor="@color/ap_text_muted"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.10"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Contenedor dinámico de ítems (se llena por código) -->
+                    <LinearLayout
+                        android:id="@+id/containerItemsVenta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- Botón agregar producto -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAgregarItem"
+                        style="@style/Widget.Alumipro.Button.Outlined"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="@string/agregar_item"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="14dp" />
+
+                    <!-- Resumen -->
+                    <TextView
+                        android:id="@+id/tvResumenVenta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:textColor="@color/ap_text_muted"
+                        android:textSize="13sp" />
+
+                    <!-- Botón registrar venta: naranja flame full-width -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRegistrarVenta"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:text="@string/registrar_venta"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:letterSpacing="0.04"
+                        app:backgroundTint="@color/ap_flame"
+                        app:cornerRadius="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

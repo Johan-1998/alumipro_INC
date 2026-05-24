@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALUMIPRO — Detalle Venta · Rediseño industrial -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ap_surface"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarDetalleVenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ap_base"
+        android:minHeight="?attr/actionBarSize"
+        android:title="@string/detalle_venta"
+        android:titleTextColor="@color/ap_text_on_dark" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/bg_toolbar_flame_line" />
+
+    <!-- Header resumen de la venta -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/ap_card"
+        app:cardCornerRadius="12dp"
+        app:strokeColor="@color/ap_border"
+        app:strokeWidth="1dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <View
+                android:layout_width="36dp"
+                android:layout_height="2dp"
+                android:background="@color/ap_flame"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvDetalleCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/ap_text"
+                android:fontFamily="sans-serif-condensed"
+                android:letterSpacing="0.02" />
+
+            <TextView
+                android:id="@+id/tvDetalleMeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/ap_text_muted"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvDetalleTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/ap_flame"
+                android:fontFamily="sans-serif-condensed" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Lista de ítems de la venta -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerDetalleVenta"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="12dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

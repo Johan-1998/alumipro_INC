@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ALUMIPRO — Paleta industrial premium 2024 -->
+
+    <!-- Antracita industrial (base oscura) -->
+    <color name="ap_base">#0E1117</color>
+    <color name="ap_base_2">#151B25</color>
+    <color name="ap_base_3">#1C2432</color>
+    <color name="ap_base_4">#232D3F</color>
+    <color name="ap_base_5">#2C3850</color>
+
+    <!-- Superficie aluminio (claro) -->
+    <color name="ap_surface">#F2F4F7</color>
+    <color name="ap_surface_2">#E8ECF2</color>
+    <color name="ap_card">#FFFFFF</color>
+    <color name="ap_border">#D8DFE8</color>
+
+    <!-- Naranja llama industrial -->
+    <color name="ap_flame">#E05C1A</color>
+    <color name="ap_flame_2">#F07030</color>
+    <color name="ap_flame_alpha">#33E05C1A</color>
+
+    <!-- Textos -->
+    <color name="ap_text">#0E1117</color>
+    <color name="ap_text_muted">#5A6E82</color>
+    <color name="ap_text_on_dark">#E8ECF2</color>
+    <color name="ap_text_on_dark_muted">#99E8ECF2</color>
+
+    <!-- Estados -->
+    <color name="ap_success">#15803D</color>
+    <color name="ap_success_bg">#F0FDF4</color>
+    <color name="ap_danger">#B91C1C</color>
+    <color name="ap_danger_bg">#FEF2F2</color>
+    <color name="ap_warn">#B45309</color>
+
+    <!-- Aliases para compatibilidad con código existente -->
+    <color name="alumipro_primary">#1C2432</color>
+    <color name="alumipro_primary_dark">#0E1117</color>
+    <color name="alumipro_accent">#E05C1A</color>
+    <color name="alumipro_accent_light">#F07030</color>
+    <color name="alumipro_surface">#F2F4F7</color>
+    <color name="alumipro_card">#FFFFFFFF</color>
+    <color name="alumipro_border">#D8DFE8</color>
+    <color name="alumipro_text">#0E1117</color>
+    <color name="alumipro_muted">#5A6E82</color>
+    <color name="alumipro_success">#15803D</color>
+    <color name="alumipro_danger">#B91C1C</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>

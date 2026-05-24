@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALUMIPRO — Ayuda · Rediseño industrial, todos los IDs y strings originales -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/ap_surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- CARD: Config API -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            app:cardBackgroundColor="@color/ap_card"
+            app:cardCornerRadius="12dp"
+            app:strokeColor="@color/ap_border"
+            app:strokeWidth="1dp"
+            app:cardElevation="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="2dp"
+                    android:background="@color/ap_flame"
+                    android:layout_marginBottom="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONFIGURACIÓN DE API"
+                    android:textColor="@color/ap_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.06"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginBottom="6dp" />
+                <TextView
+                    android:id="@+id/tvApiAyuda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="@color/ap_text_muted"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.5" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAbrirConfigApi"
+                    style="@style/Widget.Alumipro.Button.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/configurar_api"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- CARD: SQLite -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            app:cardBackgroundColor="@color/ap_card"
+            app:cardCornerRadius="12dp"
+            app:strokeColor="@color/ap_border"
+            app:strokeWidth="1dp"
+            app:cardElevation="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="2dp"
+                    android:background="@color/ap_base_3"
+                    android:layout_marginBottom="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PERSISTENCIA LOCAL SQLITE"
+                    android:textColor="@color/ap_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.06"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginBottom="6dp" />
+                <TextView
+                    android:id="@+id/tvSqliteInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ap_text_muted"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.5" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- CARD: Canal en tiempo real -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            app:cardBackgroundColor="@color/ap_card"
+            app:cardCornerRadius="12dp"
+            app:strokeColor="@color/ap_border"
+            app:strokeWidth="1dp"
+            app:cardElevation="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="2dp"
+                    android:background="@color/ap_base_3"
+                    android:layout_marginBottom="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CANAL EN TIEMPO REAL"
+                    android:textColor="@color/ap_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.06"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginBottom="6dp" />
+                <TextView
+                    android:id="@+id/tvRealtimeEstado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/ap_text_muted"
+                    android:textSize="13sp" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerNotificaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- CARD: Multimedia -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            app:cardBackgroundColor="@color/ap_card"
+            app:cardCornerRadius="12dp"
+            app:strokeColor="@color/ap_border"
+            app:strokeWidth="1dp"
+            app:cardElevation="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="2dp"
+                    android:background="@color/ap_flame"
+                    android:layout_marginBottom="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MULTIMEDIA DE APOYO"
+                    android:textColor="@color/ap_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.06"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginBottom="10dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnPlayAudio"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:text="@string/probar_audio"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/ap_flame"
+                        app:cornerRadius="8dp" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnStopAudio"
+                        style="@style/Widget.Alumipro.Button.Outlined"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/detener_audio"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <VideoView
+                    android:id="@+id/videoTutorial"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
